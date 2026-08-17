@@ -1,0 +1,303 @@
+---
+---
+<section class="hero-section">
+  <div class="container hero-grid">
+    <div class="hero-content">
+      <div class="badge-eyebrow">
+        <span>🧠 Neurociência & Parentalidade Positiva</span>
+      </div>
+
+      <h1 class="hero-title">
+        Desarme as Birras do Seu Filho em <span class="highlight-text">Menos de 5 Minutos</span>.
+      </h1>
+
+      <p class="hero-subtitle">
+        Elimine choros e escândalos sem gritos ou palmadas, aplicando o Método do Redirecionamento Cognitivo para ter calma e cooperação.
+      </p>
+
+      <div class="hero-action-area">
+        <a href="#oferta" class="btn-cta">
+          <span>QUERO ELIMINAR AS BIRRAS</span>
+          <span class="sub-text">⚡ Acesso Imediato • 100% Seguro • Por apenas R$ 47 ou 12x de R$ 4,72</span>
+        </a>
+
+        <!-- Social Proof Chips -->
+        <div class="hero-social-proof">
+          <div class="avatar-stack">
+            <img src="/images/claudia.jpeg" alt="Aluna" class="stack-avatar" />
+            <img src="/images/kele.jpg" alt="Aluna" class="stack-avatar" />
+            <img src="/images/gleisy.png" alt="Aluna" class="stack-avatar" />
+            <img src="/images/print-tatiana.jpeg" alt="Aluna" class="stack-avatar" />
+          </div>
+          <div class="social-proof-text">
+            <div class="stars-row">
+              <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+              <strong class="rating-number">4.9/5</strong>
+            </div>
+            <p>Mais de <strong>3.500 famílias</strong> transformadas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-card-container">
+        <div class="image-frame">
+          <img 
+            src="/images/mae-filho-acolhimento.jpeg" 
+            alt="Mãe e filho em momento de carinho e conexão" 
+            class="hero-main-img"
+          />
+        </div>
+        
+        <!-- Floating Tactile Badge 1 -->
+        <div class="floating-badge badge-top">
+          <div class="floating-icon-box success-icon">✓</div>
+          <div class="floating-text">
+            <strong>Desarme em Minutos</strong>
+            <span>Sem castigos ou palmadas</span>
+          </div>
+        </div>
+
+        <!-- Floating Tactile Badge 2 -->
+        <div class="floating-badge badge-bottom">
+          <div class="floating-icon-box heart-icon">❤️</div>
+          <div class="floating-text">
+            <strong>Conexão & Afeto</strong>
+            <span>Firmeza com respeito</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero-section {
+    position: relative;
+    padding: 3.5rem 0 4.5rem 0;
+    min-height: calc(100dvh - 120px);
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .hero-title {
+    font-size: 3.15rem;
+    font-weight: 850;
+    color: var(--color-primary);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.25rem;
+  }
+
+  .highlight-text {
+    background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    max-width: 54ch;
+  }
+
+  .hero-action-area {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+  }
+
+  /* Social Proof Chips */
+  .hero-social-proof {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  .avatar-stack {
+    display: flex;
+    align-items: center;
+  }
+
+  .stack-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 2.5px solid #FFFFFF;
+    margin-left: -12px;
+    object-fit: cover;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .stack-avatar:first-child {
+    margin-left: 0;
+  }
+
+  .social-proof-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.875rem;
+  }
+
+  .stars-row {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    color: #F59E0B;
+    font-size: 0.95rem;
+  }
+
+  .rating-number {
+    color: var(--color-primary);
+    font-weight: 700;
+    margin-left: 0.35rem;
+  }
+
+  .social-proof-text p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  /* Hero Visual */
+  .hero-visual {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-card-container {
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+  }
+
+  .image-frame {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+    border: 4px solid #FFFFFF;
+    background: #FFFFFF;
+  }
+
+  .hero-main-img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+  }
+
+  /* Floating Badges */
+  .floating-badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    padding: 0.85rem 1.15rem;
+    border-radius: var(--radius-md);
+    box-shadow: 0 16px 32px -6px rgba(15, 23, 42, 0.16);
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    z-index: 2;
+    animation: float 4.5s ease-in-out infinite;
+  }
+
+  .badge-top {
+    top: 1.5rem;
+    left: -2rem;
+  }
+
+  .badge-bottom {
+    bottom: 1.5rem;
+    right: -2rem;
+    animation-delay: 2.25s;
+  }
+
+  .floating-icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.15rem;
+    font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  .success-icon {
+    background: #D1FAE5;
+    color: #059669;
+  }
+
+  .heart-icon {
+    background: #FEE2E2;
+    color: #DC2626;
+  }
+
+  .floating-text strong {
+    display: block;
+    font-size: 0.875rem;
+    color: var(--color-primary);
+    font-weight: 700;
+  }
+
+  .floating-text span {
+    font-size: 0.775rem;
+    color: var(--color-text-muted);
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-7px); }
+  }
+
+  @media (max-width: 960px) {
+    .hero-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+      text-align: center;
+    }
+
+    .hero-title {
+      font-size: 2.35rem;
+    }
+
+    .hero-subtitle {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-action-area {
+      align-items: center;
+    }
+
+    .hero-social-proof {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .badge-top {
+      left: 0;
+      top: -1rem;
+    }
+
+    .badge-bottom {
+      right: 0;
+      bottom: -1rem;
+    }
+  }
+</style>

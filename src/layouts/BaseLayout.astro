@@ -1,0 +1,118 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Elimine as Birras Sem Stress | Método do Redirecionamento Cognitivo",
+  description = "Aprenda a desarmar as birras do seu filho em menos de 5 minutos sem precisar bater, gritar ou aplicar castigos. Treinamento prático com Tiago Fernandes."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/images/logo.png" />
+  <meta name="generator" content={Astro.generator} />
+  
+  <title>{title}</title>
+  <meta name="description" content={description} />
+  <meta name="author" content="Tiago Fernandes - Instituto Tiago Fernandes" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content="/images/mae-filho-acolhimento.jpeg" />
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:title" content={title} />
+  <meta property="twitter:description" content={description} />
+  <meta property="twitter:image" content="/images/mae-filho-acolhimento.jpeg" />
+</head>
+<body>
+  <!-- Top Bar de Urgência Suave -->
+  <div class="top-bar">
+    <span>🎁 <strong>OFERTA ESPECIAL:</strong> Acesso imediato + 3 Bônus Exclusivos por apenas <strong>R$ 47</strong></span>
+  </div>
+
+  <slot />
+
+  <script>
+    // FAQ Accordion Logic
+    document.querySelectorAll('.faq-question').forEach(button => {
+      button.addEventListener('click', () => {
+        const item = button.parentElement;
+        const isActive = item?.classList.contains('active');
+        
+        document.querySelectorAll('.faq-item').forEach(el => el.classList.remove('active'));
+        
+        if (!isActive && item) {
+          item.classList.add('active');
+        }
+      });
+    });
+
+    // Custom Audio Player Logic with Waveform Animation
+    const audio = document.getElementById('tatianaAudio') as HTMLAudioElement;
+    const playBtn = document.getElementById('playBtn');
+    const playIcon = document.getElementById('playIcon');
+    const progressFill = document.getElementById('progressFill');
+    const currentTimeEl = document.getElementById('currentTime');
+    const durationEl = document.getElementById('duration');
+    const progressBar = document.getElementById('progressBar');
+    const audioCard = document.querySelector('.custom-audio-card');
+
+    if (audio && playBtn && playIcon && progressFill && currentTimeEl && durationEl && progressBar) {
+      function formatTime(seconds: number) {
+        if (isNaN(seconds)) return "0:00";
+        const mins = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+      }
+
+      audio.addEventListener('loadedmetadata', () => {
+        durationEl.textContent = formatTime(audio.duration);
+      });
+
+      playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play();
+          playIcon.textContent = '⏸️';
+          audioCard?.classList.add('audio-playing');
+        } else {
+          audio.pause();
+          playIcon.textContent = '▶️';
+          audioCard?.classList.remove('audio-playing');
+        }
+      });
+
+      audio.addEventListener('timeupdate', () => {
+        const progress = (audio.currentTime / audio.duration) * 100;
+        progressFill.style.width = `${progress}%`;
+        currentTimeEl.textContent = formatTime(audio.currentTime);
+      });
+
+      progressBar.addEventListener('click', (e) => {
+        const rect = progressBar.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const width = rect.width;
+        const newTime = (clickX / width) * audio.duration;
+        audio.currentTime = newTime;
+      });
+
+      audio.addEventListener('ended', () => {
+        playIcon.textContent = '▶️';
+        progressFill.style.width = '0%';
+        audioCard?.classList.remove('audio-playing');
+      });
+    }
+  </script>
+</body>
+</html>

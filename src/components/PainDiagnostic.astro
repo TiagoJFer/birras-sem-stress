@@ -1,0 +1,197 @@
+---
+---
+<section class="section-py pain-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Você ama seu filho... Mas no meio de um escândalo, já se sentiu sem chão?</h2>
+      <p>A verdade que quase nenhum pai admite em voz alta: educar no improviso desgasta qualquer família. Veja se você já viveu isso:</p>
+    </div>
+
+    <div class="pain-grid">
+      <!-- Card 1 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrapper">🛒</div>
+        <div class="pain-body">
+          <h3>O Escândalo em Público</h3>
+          <p>O desespero de ver seu filho se jogando no chão do mercado enquanto olhares julgam sua autoridade.</p>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrapper">🔊</div>
+        <div class="pain-body">
+          <h3>Falar com as Paredes</h3>
+          <p>Pedir com calma várias vezes e a criança te ignorar ou te desafiar com o olhar, fazendo o oposto.</p>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrapper">💔</div>
+        <div class="pain-body">
+          <h3>A Culpa Após Perder o Controle</h3>
+          <p>A paciência esgotar, você gritar ou perder o controle... e 5 minutos depois chorar com o coração dilacerado.</p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrapper">📱</div>
+        <div class="pain-body">
+          <h3>Chantagens por 5 Minutos de Paz</h3>
+          <p>Entregar o celular ou comprar doces só para calar a crise, mesmo sabendo que isso alimenta o ciclo.</p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrapper">🔋</div>
+        <div class="pain-body">
+          <h3>Exaustão Mental Diária</h3>
+          <p>Chegar ao fim do dia drenado(a), com a sensação de estar sempre pisando em ovos dentro de casa.</p>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="pain-card">
+        <div class="pain-icon-wrapper">❓</div>
+        <div class="pain-body">
+          <h3>"Onde Estou Errando?"</h3>
+          <p>O medo silencioso de estar traumatizando seu filho e não saber como corrigir o rumo da educação.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloco de Acolhimento & Virada de Chave -->
+    <div class="empathy-banner">
+      <div class="empathy-content">
+        <div class="empathy-quote-icon">💡</div>
+        <div>
+          <h3>Respira fundo: A culpa NÃO é sua.</h3>
+          <p>Ninguém te ensinou como funciona a neurobiologia de uma criança em crise. O que você precisa não é de mais força ou palmadas — você só precisa do <strong>método certo para desarmar a tempestade neural</strong>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .pain-section {
+    background-color: #FFFFFF;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .pain-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .pain-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .pain-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(239, 68, 68, 0.35);
+    box-shadow: 0 12px 24px -6px rgba(239, 68, 68, 0.08);
+  }
+
+  .pain-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .pain-body h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+    color: var(--color-primary);
+    font-weight: 750;
+  }
+
+  .pain-body p {
+    font-size: 0.925rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+  }
+
+  .empathy-banner {
+    background: linear-gradient(135deg, #090D16 0%, #111827 50%, #0F172A 100%);
+    color: #FFFFFF;
+    border-radius: var(--radius-lg);
+    padding: 2.25rem 2.5rem;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .empathy-content {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+  }
+
+  .empathy-quote-icon {
+    font-size: 2.25rem;
+    background: rgba(255, 255, 255, 0.1);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .empathy-content h3 {
+    color: #38BDF8;
+    font-size: 1.35rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .empathy-content p {
+    color: #E2E8F0;
+    font-size: 1.05rem;
+    line-height: 1.6;
+  }
+
+  .empathy-content strong {
+    color: #FFFFFF;
+  }
+
+  @media (max-width: 960px) {
+    .pain-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .empathy-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .pain-grid {
+      grid-template-columns: 1fr;
+    }
+    .empathy-banner {
+      padding: 1.75rem 1.25rem;
+    }
+  }
+</style>

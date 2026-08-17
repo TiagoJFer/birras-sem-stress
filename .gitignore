@@ -1,0 +1,17 @@
+# Dependências
+node_modules/
+
+# Build do Astro
+dist/
+.astro/
+
+# Logs e arquivos de sistema
+.DS_Store
+.DS_Store 2
+.vscode/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.env
+.env.*

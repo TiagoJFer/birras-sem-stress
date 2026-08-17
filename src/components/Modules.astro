@@ -1,0 +1,124 @@
+---
+---
+<section class="section-py modules-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>O Que Você Vai Dominar no Treinamento</h2>
+      <p>Um mapa prático, direto ao ponto e sem enrolação teórica para ter o controle total em qualquer momento de crise:</p>
+    </div>
+
+    <div class="modules-grid">
+      <!-- Módulo 1 -->
+      <div class="module-card">
+        <div class="module-number">01</div>
+        <div class="module-info">
+          <span class="module-tag">Prevenção Inteligente</span>
+          <h3>Os Gatilhos Detonadores da Birra</h3>
+          <p>Aprenda a ler os micro-sinais invisíveis que antecedem a crise. Saiba como desarmar o mecanismo antes da explosão emocional acontecer, evitando escândalos no supermercado ou na hora de sair.</p>
+        </div>
+      </div>
+
+      <!-- Módulo 2 -->
+      <div class="module-card">
+        <div class="module-number">02</div>
+        <div class="module-info">
+          <span class="module-tag">Desenvolvimento Infantil</span>
+          <h3>Oportunidades Ocultas & Inteligência Emocional</h3>
+          <p>Descubra como transformar o momento mais tenso do seu dia na maior oportunidade de aprendizado do seu filho, ensinando autorregulação e maturidade emocional que ele levará para toda a vida.</p>
+        </div>
+      </div>
+
+      <!-- Módulo 3 -->
+      <div class="module-card">
+        <div class="module-number">03</div>
+        <div class="module-info">
+          <span class="module-tag">Blindagem Parental</span>
+          <h3>As 8 Armadilhas Fatais a Evitar</h3>
+          <p>As 8 reações automáticas que praticamente todos os pais cometem por instinto, mas que apenas pioram o choro. Saiba exatamente o que NÃO fazer e preserve sua autoridade com respeito.</p>
+        </div>
+      </div>
+
+      <!-- Módulo 4 -->
+      <div class="module-card">
+        <div class="module-number">04</div>
+        <div class="module-info">
+          <span class="module-tag">Ação Imediata</span>
+          <h3>O Protocolo SOS Anti-Birras Passo a Passo</h3>
+          <p>O roteiro de primeiros socorros: o que falar, qual tom de voz usar, como se posicionar corporalmente e a sequência exata de ações para cessar a crise e restabelecer a calma em minutos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .modules-section {
+    background: #FFFFFF;
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .module-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius-lg);
+    padding: 2.25rem;
+    display: flex;
+    gap: 1.75rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .module-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--color-brand);
+    box-shadow: var(--shadow-lg);
+    background: #FFFFFF;
+  }
+
+  .module-number {
+    font-family: var(--font-heading);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-brand);
+    opacity: 0.4;
+    line-height: 1;
+  }
+
+  .module-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-brand-deep);
+    margin-bottom: 0.45rem;
+  }
+
+  .module-info h3 {
+    font-size: 1.25rem;
+    color: var(--color-primary);
+    margin-bottom: 0.65rem;
+  }
+
+  .module-info p {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    line-height: 1.55;
+  }
+
+  @media (max-width: 768px) {
+    .modules-grid {
+      grid-template-columns: 1fr;
+    }
+    .module-card {
+      padding: 1.75rem;
+      gap: 1.25rem;
+    }
+  }
+</style>
