@@ -1,53 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  /* Paleta & Tons Refinados */
-  --bg-main: #FAF9F6;
-  --bg-surface: #FFFFFF;
-  --bg-surface-subtle: #F8FAFC;
-  --bg-surface-hover: #F1F5F9;
-  --bg-surface-glass: rgba(255, 255, 255, 0.88);
+  /* Paleta Oficial do Projeto: "Summer Splash" (Opção 03) */
+  --bg-main: #FFFFFF;              /* Fundo Puro */
+  --bg-surface: #FFFFFF;           /* Cards e Superfícies */
+  --bg-surface-subtle: #F8FAFC;    /* Superfície Sutil */
+  --bg-surface-hover: #F0FDF4;     /* Hover Suave */
+  --bg-surface-glass: rgba(255, 255, 255, 0.94);
   
-  --color-primary: #090D16;
-  --color-primary-light: #1E293B;
+  --color-primary: #0F172A;        /* Títulos H1-H3 / Oceano Profundo */
+  --color-primary-light: #1E293B;  /* Estrutura & Subtítulos */
   --color-primary-muted: #475569;
   
-  --color-brand: #0284C7;
+  --color-brand: #0284C7;          /* Destaque / Azul Céu Tropical */
   --color-brand-deep: #0369A1;
   --color-brand-light: #E0F2FE;
-  --color-brand-glow: rgba(2, 132, 199, 0.15);
+  --color-brand-glow: rgba(2, 132, 199, 0.2);
   
-  --color-cta: #10B981;
-  --color-cta-hover: #059669;
-  --color-cta-dark: #047857;
-  --color-cta-glow: rgba(16, 185, 129, 0.4);
+  --color-cta: #16A34A;            /* Botão Compra / Verde Conversão */
+  --color-cta-hover: #15803D;
+  --color-cta-dark: #14532D;
+  --color-cta-glow: rgba(22, 163, 74, 0.45);
   
-  --color-accent: #F59E0B;
-  --color-accent-deep: #D97706;
-  --color-accent-light: #FEF3C7;
+  --color-accent: #06B6D4;         /* Ação Secundária / Turquesa Lagoa */
+  --color-accent-deep: #0891B2;
+  --color-accent-light: #ECFEFF;
   
   --color-danger-subtle: #FEF2F2;
   --color-danger-border: #FECACA;
   --color-danger-text: #991B1B;
   
-  --color-text-main: #0F172A;
-  --color-text-muted: #64748B;
+  --color-text-main: #1E293B;      /* Texto (#1E293B) */
+  --color-text-muted: #475569;
   --color-text-light: #94A3B8;
   
-  --border-subtle: rgba(226, 232, 240, 0.8);
-  --border-card: rgba(226, 232, 240, 0.7);
+  --border-subtle: #E2E8F0;
+  --border-card: #E2E8F0;
   --border-focus: rgba(2, 132, 199, 0.4);
   
   /* Tipografia */
   --font-heading: 'Outfit', 'Plus Jakarta Sans', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   
-  /* Sombras Tácteis e Profundidade */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 4px 12px -2px rgba(15, 23, 42, 0.06), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
-  --shadow-lg: 0 12px 24px -4px rgba(15, 23, 42, 0.08), 0 4px 8px -2px rgba(15, 23, 42, 0.04);
-  --shadow-xl: 0 24px 48px -12px rgba(15, 23, 42, 0.12), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
-  --shadow-glow-cta: 0 12px 30px -4px rgba(16, 185, 129, 0.45), 0 4px 10px rgba(16, 185, 129, 0.2);
+  /* Sombras Tintadas com base Tropical */
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 14px -2px rgba(2, 132, 199, 0.08), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(2, 132, 199, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 24px 48px -12px rgba(2, 132, 199, 0.16), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+  --shadow-glow-cta: 0 12px 30px -4px rgba(22, 163, 74, 0.45), 0 4px 12px rgba(22, 163, 74, 0.25);
   --shadow-inner-light: inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
   
   /* Geometria */
@@ -81,7 +81,7 @@ body {
   position: relative;
 }
 
-/* Background Atmosphere */
+/* Background Atmosphere Tropical */
 body::before {
   content: '';
   position: fixed;
@@ -90,8 +90,9 @@ body::before {
   width: 100vw;
   height: 100vh;
   background: 
-    radial-gradient(circle at 10% 15%, rgba(2, 132, 199, 0.035) 0%, transparent 40%),
-    radial-gradient(circle at 90% 85%, rgba(16, 185, 129, 0.035) 0%, transparent 40%);
+    radial-gradient(circle at 10% 15%, rgba(2, 132, 199, 0.045) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(6, 182, 212, 0.045) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(22, 163, 74, 0.02) 0%, transparent 60%);
   pointer-events: none;
   z-index: -1;
 }
@@ -129,9 +130,9 @@ img {
   padding-right: 1.5rem;
 }
 
-/* Top Bar */
+/* Top Bar Tropical */
 .top-bar {
-  background: linear-gradient(90deg, #090D16 0%, #0F172A 50%, #090D16 100%);
+  background: linear-gradient(90deg, #0284C7 0%, #06B6D4 50%, #0284C7 100%);
   color: #FFFFFF;
   text-align: center;
   padding: 0.7rem 1rem;
@@ -141,12 +142,13 @@ img {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .top-bar strong {
-  color: #38BDF8;
+  color: #FFFFFF;
   font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 /* Badges de Destaque */
@@ -156,15 +158,15 @@ img {
   gap: 0.5rem;
   padding: 0.45rem 1.15rem;
   background: #E0F2FE;
-  color: #0369A1;
-  border: 1px solid rgba(2, 132, 199, 0.25);
+  color: #0284C7;
+  border: 1px solid rgba(2, 132, 199, 0.3);
   border-radius: var(--radius-full);
   font-size: 0.8125rem;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: 1.25rem;
-  box-shadow: 0 2px 6px rgba(2, 132, 199, 0.08);
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.12);
 }
 
 /* Botões CTA com Efeito Shimmer e Micro-interações */
@@ -174,7 +176,7 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  background: linear-gradient(135deg, #16A34A 0%, #15803D 100%);
   color: #FFFFFF !important;
   font-family: var(--font-heading);
   font-size: 1.15rem;
@@ -184,7 +186,7 @@ img {
   box-shadow: var(--shadow-glow-cta);
   text-align: center;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   cursor: pointer;
   transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   text-transform: uppercase;
@@ -193,8 +195,8 @@ img {
 
 .btn-cta:hover {
   transform: translateY(-3px) scale(1.015);
-  box-shadow: 0 20px 35px -5px rgba(16, 185, 129, 0.55), 0 6px 12px rgba(16, 185, 129, 0.3);
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  box-shadow: 0 20px 35px -5px rgba(22, 163, 74, 0.55), 0 6px 14px rgba(22, 163, 74, 0.35);
+  background: linear-gradient(135deg, #15803D 0%, #166534 100%);
 }
 
 .btn-cta:active {
@@ -503,3 +505,224 @@ img {
     padding-bottom: 80px;
   }
 }
+
+/* ==========================================================================
+   TEMA OPÇÃO 03: "SUMMER SPLASH" (E-commerce Vibrante & Vendas)
+   Extração cromática & tokens mestres do Guia de Design System
+   ========================================================================== */
+[data-theme="summer-splash"] {
+  /* Tokens de Cor & Superfície */
+  --bg-main: #FFFFFF;              /* Fundo Puro */
+  --bg-surface: #FFFFFF;           /* Cards e Superfícies */
+  --bg-surface-subtle: #F8FAFC;    /* Superfície Sutil */
+  --bg-surface-hover: #F0FDF4;     /* Hover Suave */
+  --bg-surface-glass: rgba(255, 255, 255, 0.94);
+  
+  --color-primary: #0F172A;        /* Títulos H1-H3 / Oceano Profundo */
+  --color-primary-light: #1E293B;  /* Estrutura & Subtítulos */
+  --color-primary-muted: #475569;
+  
+  --color-brand: #0284C7;          /* Destaque / Azul Céu Tropical */
+  --color-brand-deep: #0369A1;
+  --color-brand-light: #E0F2FE;
+  --color-brand-glow: rgba(2, 132, 199, 0.2);
+  
+  --color-cta: #16A34A;            /* Botão Compra / Verde Conversão */
+  --color-cta-hover: #15803D;
+  --color-cta-dark: #14532D;
+  --color-cta-glow: rgba(22, 163, 74, 0.45);
+  
+  --color-accent: #06B6D4;         /* Ação Secundária / Turquesa Lagoa */
+  --color-accent-deep: #0891B2;
+  --color-accent-light: #ECFEFF;
+  
+  --color-text-main: #1E293B;      /* Texto (#1E293B) */
+  --color-text-muted: #475569;
+  --color-text-light: #94A3B8;
+  
+  --border-subtle: #E2E8F0;
+  --border-card: #E2E8F0;
+  --border-focus: rgba(2, 132, 199, 0.4);
+  
+  /* Sombras Tintadas com base Tropical */
+  --shadow-sm: 0 1px 3px 0 rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 4px 14px -2px rgba(2, 132, 199, 0.08), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-lg: 0 12px 28px -4px rgba(2, 132, 199, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.04);
+  --shadow-xl: 0 24px 48px -12px rgba(2, 132, 199, 0.16), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+  --shadow-glow-cta: 0 12px 30px -4px rgba(22, 163, 74, 0.45), 0 4px 12px rgba(22, 163, 74, 0.25);
+}
+
+/* Background Atmosphere Tropical */
+[data-theme="summer-splash"] body::before {
+  background: 
+    radial-gradient(circle at 10% 15%, rgba(2, 132, 199, 0.045) 0%, transparent 45%),
+    radial-gradient(circle at 90% 85%, rgba(6, 182, 212, 0.045) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, rgba(22, 163, 74, 0.02) 0%, transparent 60%);
+}
+
+/* Top Bar Tropical */
+[data-theme="summer-splash"] .top-bar {
+  background: linear-gradient(90deg, #0284C7 0%, #06B6D4 50%, #0284C7 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+}
+
+[data-theme="summer-splash"] .top-bar strong {
+  color: #FFFFFF;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+/* Badges com Turquesa / Sky */
+[data-theme="summer-splash"] .badge-eyebrow {
+  background: #E0F2FE;
+  color: #0284C7;
+  border: 1px solid rgba(2, 132, 199, 0.3);
+  box-shadow: 0 2px 8px rgba(2, 132, 199, 0.12);
+}
+
+/* Highlight Text com Gradiente Sky -> Turquesa */
+[data-theme="summer-splash"] .highlight-text {
+  background: linear-gradient(135deg, #0284C7 0%, #06B6D4 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+/* Botão CTA Principal de Compra (#16A34A) */
+[data-theme="summer-splash"] .btn-cta {
+  background: linear-gradient(135deg, #16A34A 0%, #15803D 100%) !important;
+  box-shadow: var(--shadow-glow-cta) !important;
+  border-color: rgba(255, 255, 255, 0.35) !important;
+}
+
+[data-theme="summer-splash"] .btn-cta:hover {
+  background: linear-gradient(135deg, #15803D 0%, #166534 100%) !important;
+  box-shadow: 0 20px 35px -5px rgba(22, 163, 74, 0.55), 0 6px 14px rgba(22, 163, 74, 0.35) !important;
+}
+
+/* Cards & Seções do Summer Splash */
+[data-theme="summer-splash"] .card-premium {
+  border-color: #E2E8F0;
+  box-shadow: 0 4px 16px -2px rgba(2, 132, 199, 0.08);
+}
+
+[data-theme="summer-splash"] .card-premium:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Hero Badge */
+[data-theme="summer-splash"] .floating-icon-box.success-icon {
+  background: #DCFCE7;
+  color: #16A34A;
+}
+
+[data-theme="summer-splash"] .header-badge {
+  background: #ECFEFF;
+  color: #0891B2;
+  border-color: rgba(6, 182, 212, 0.3);
+}
+
+[data-theme="summer-splash"] .pulse-dot {
+  background: #16A34A;
+  box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+}
+
+/* Pricing Card & Offer */
+[data-theme="summer-splash"] .pricing-section {
+  background: radial-gradient(circle at center, rgba(6, 182, 212, 0.08) 0%, rgba(255, 255, 255, 1) 70%) !important;
+}
+
+[data-theme="summer-splash"] .pricing-card {
+  border-color: #16A34A !important;
+  box-shadow: 0 30px 60px -15px rgba(22, 163, 74, 0.22), 0 0 0 1px rgba(22, 163, 74, 0.15) !important;
+}
+
+[data-theme="summer-splash"] .pricing-badge-popular {
+  background: linear-gradient(135deg, #16A34A 0%, #06B6D4 100%) !important;
+  box-shadow: 0 6px 20px rgba(22, 163, 74, 0.4) !important;
+}
+
+[data-theme="summer-splash"] .pricing-stack-list .check-icon {
+  background: #DCFCE7 !important;
+  color: #16A34A !important;
+}
+
+[data-theme="summer-splash"] .item-included {
+  background: #DCFCE7 !important;
+  color: #15803D !important;
+}
+
+[data-theme="summer-splash"] .pricing-anchor-pill {
+  background: #F0FDF4 !important;
+  border-color: rgba(22, 163, 74, 0.25) !important;
+  color: #166534 !important;
+}
+
+/* Guarantee Badge */
+[data-theme="summer-splash"] .guarantee-badge-icon {
+  background: linear-gradient(135deg, #0284C7 0%, #06B6D4 100%) !important;
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.35) !important;
+}
+
+/* Audio Player */
+[data-theme="summer-splash"] .custom-audio-card {
+  background: linear-gradient(145deg, #0F172A 0%, #1E293B 50%, #0F172A 100%) !important;
+  border-color: rgba(6, 182, 212, 0.25) !important;
+}
+
+[data-theme="summer-splash"] .custom-audio-card::before {
+  background: radial-gradient(circle, rgba(6, 182, 212, 0.22) 0%, transparent 70%) !important;
+}
+
+[data-theme="summer-splash"] .audio-avatar {
+  border-color: #06B6D4 !important;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.45) !important;
+}
+
+[data-theme="summer-splash"] .audio-play-btn {
+  background: linear-gradient(135deg, #0284C7 0%, #06B6D4 100%) !important;
+  box-shadow: 0 4px 14px rgba(2, 132, 199, 0.45) !important;
+}
+
+[data-theme="summer-splash"] .audio-play-btn:hover {
+  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.6) !important;
+}
+
+[data-theme="summer-splash"] .audio-progress-fill {
+  background: linear-gradient(90deg, #0284C7, #06B6D4) !important;
+}
+
+/* FAQ */
+[data-theme="summer-splash"] .faq-item.active {
+  border-color: #0284C7 !important;
+  box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.15) !important;
+}
+
+[data-theme="summer-splash"] .faq-question:hover {
+  color: #0284C7 !important;
+}
+
+[data-theme="summer-splash"] .faq-icon {
+  color: #0284C7 !important;
+}
+
+/* Empathy Banner */
+[data-theme="summer-splash"] .empathy-banner {
+  background: linear-gradient(135deg, #0F172A 0%, #1E293B 50%, #0F172A 100%) !important;
+  border-color: rgba(6, 182, 212, 0.25) !important;
+}
+
+/* Footer */
+[data-theme="summer-splash"] .site-footer {
+  background: #0F172A;
+  border-top: 1px solid rgba(6, 182, 212, 0.18);
+}
+
+[data-theme="summer-splash"] .site-footer .footer-links a {
+  color: #38BDF8;
+}
+
+[data-theme="summer-splash"] .site-footer .footer-links a:hover {
+  color: #06B6D4;
+}
+

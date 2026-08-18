@@ -4,16 +4,18 @@ import '../styles/global.css';
 interface Props {
   title?: string;
   description?: string;
+  theme?: string;
 }
 
 const {
   title = "Elimine as Birras Sem Stress | Método do Redirecionamento Cognitivo",
-  description = "Aprenda a desarmar as birras do seu filho em menos de 5 minutos sem precisar bater, gritar ou aplicar castigos. Treinamento prático com Tiago Fernandes."
+  description = "Aprenda a desarmar as birras do seu filho em menos de 5 minutos sem precisar bater, gritar ou aplicar castigos. Treinamento prático com Tiago Fernandes.",
+  theme = "summer-splash"
 } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme={theme}>
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />

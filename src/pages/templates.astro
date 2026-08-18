@@ -17,8 +17,11 @@ import Footer from '../components/Footer.astro';
 <BaseLayout title="Catálogo de Templates e Componentes | Elimine as Birras">
   <div class="templates-admin-bar">
     <div class="container admin-bar-inner">
-      <span>📐 <strong>Section Templates (Governança Sites com IA)</strong> — Visualização modular de componentes</span>
-      <a href="/" class="btn-live-view">Ver Landing Page Oficial →</a>
+      <span>📐 <strong>Section Templates (Governança Sites com IA)</strong> — Visualização modular</span>
+      <div class="admin-links">
+        <a href="/" class="btn-live-view">Página Original →</a>
+        <a href="/summer-splash" class="btn-live-view btn-summer">🌴 Opção 03: Summer Splash →</a>
+      </div>
     </div>
   </div>
 
@@ -75,6 +78,14 @@ import Footer from '../components/Footer.astro';
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .admin-links {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
   }
 
   .btn-live-view {
@@ -84,6 +95,18 @@ import Footer from '../components/Footer.astro';
     padding: 0.35rem 0.85rem;
     border-radius: var(--radius-sm);
     transition: all 0.2s ease;
+    font-size: 0.8125rem;
+  }
+
+  .btn-summer {
+    background: #DCFCE7;
+    color: #15803D;
+    border: 1px solid #86EFAC;
+  }
+
+  .btn-summer:hover {
+    background: #16A34A;
+    color: #FFFFFF;
   }
 
   .btn-live-view:hover {
