@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://birras.lidereducacional.com.br/sitemap.xml

@@ -333,6 +333,7 @@ const heroImages = [
     position: relative;
     width: 100%;
     max-width: 440px;
+    aspect-ratio: 440 / 460;
   }
 
   .image-frame.hero-carousel {
@@ -342,7 +343,9 @@ const heroImages = [
     box-shadow: var(--shadow-xl);
     border: 4px solid #FFFFFF;
     background: #0F172A;
-    height: 460px;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 440 / 460;
     user-select: none;
   }
 
@@ -377,6 +380,7 @@ const heroImages = [
     object-fit: cover;
     object-position: center;
     display: block;
+    aspect-ratio: 440 / 460;
   }
 
   /* Carousel Navigation Dots */
@@ -399,6 +403,7 @@ const heroImages = [
   }
 
   .carousel-dot {
+    position: relative;
     width: 8px;
     height: 8px;
     border-radius: 9999px;
@@ -407,6 +412,17 @@ const heroImages = [
     padding: 0;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Touch Target Acessível (44x44px mínimo para mobile) */
+  .carousel-dot::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 44px;
+    height: 44px;
   }
 
   .carousel-dot.active {
@@ -523,10 +539,6 @@ const heroImages = [
   }
 
   @media (max-width: 480px) {
-    .image-frame.hero-carousel {
-      height: 360px;
-    }
-
     .hero-title {
       font-size: 2rem;
     }

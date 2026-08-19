@@ -30,7 +30,7 @@
   
   --color-text-main: #1E293B;      /* Texto (#1E293B) */
   --color-text-muted: #475569;
-  --color-text-light: #94A3B8;
+  --color-text-light: #64748B;
   
   --border-subtle: #E2E8F0;
   --border-card: #E2E8F0;
@@ -536,7 +536,7 @@ img {
   
   --color-text-main: #1E293B;      /* Texto (#1E293B) */
   --color-text-muted: #475569;
-  --color-text-light: #94A3B8;
+  --color-text-light: #64748B;
   
   --border-subtle: #E2E8F0;
   --border-card: #E2E8F0;
