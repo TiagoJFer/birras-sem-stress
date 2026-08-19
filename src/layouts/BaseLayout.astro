@@ -27,6 +27,10 @@ const {
   <meta name="description" content={description} />
   <meta name="author" content="Tiago Fernandes - Instituto Tiago Fernandes" />
   
+  <!-- Preload da Imagem Principal (LCP Instantâneo < 1s) -->
+  <link rel="preload" as="image" href="/images/hero-carousel/birra-4.webp" type="image/webp" fetchpriority="high" />
+  <link rel="preload" as="image" href="/images/logo.webp" type="image/webp" fetchpriority="high" />
+
   <!-- Preconnect para Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
