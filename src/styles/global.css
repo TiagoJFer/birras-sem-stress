@@ -133,9 +133,11 @@ img {
   background: linear-gradient(90deg, #0284C7 0%, #06B6D4 50%, #0284C7 100%);
   color: #FFFFFF;
   text-align: center;
-  padding: 0.7rem 1rem;
-  font-size: 0.875rem;
-  font-weight: 500;
+  padding: 0.6rem 1rem;
+  font-size: 0.85rem;
+  line-height: 1.35;
+  min-height: 44px;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
