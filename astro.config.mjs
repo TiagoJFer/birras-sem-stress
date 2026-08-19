@@ -2,6 +2,6 @@ import { defineConfig } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://birrassemstress.pages.dev',
+  site: 'https://birras.lidereducacional.com.br',
   compressHTML: true,
 });

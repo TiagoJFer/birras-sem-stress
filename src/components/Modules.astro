@@ -3,6 +3,9 @@
 <section class="section-py modules-section">
   <div class="container">
     <div class="section-header">
+      <div class="badge-eyebrow">
+        <span>📚 Treinamento Estruturado Passo a Passo</span>
+      </div>
       <h2>O Que Você Vai Dominar no Treinamento</h2>
       <p>Um mapa prático, direto ao ponto e sem enrolação teórica para ter o controle total em qualquer momento de crise:</p>
     </div>
@@ -12,7 +15,10 @@
       <div class="module-card">
         <div class="module-number">01</div>
         <div class="module-info">
-          <span class="module-tag">Prevenção Inteligente</span>
+          <div class="module-header-meta">
+            <span class="module-tag">Prevenção Inteligente</span>
+            <span class="module-format">🎬 Videoaulas + Checklist</span>
+          </div>
           <h3>Os Gatilhos Detonadores da Birra</h3>
           <p>Aprenda a ler os micro-sinais invisíveis que antecedem a crise. Saiba como desarmar o mecanismo antes da explosão emocional acontecer, evitando escândalos no supermercado ou na hora de sair.</p>
         </div>
@@ -22,7 +28,10 @@
       <div class="module-card">
         <div class="module-number">02</div>
         <div class="module-info">
-          <span class="module-tag">Desenvolvimento Infantil</span>
+          <div class="module-header-meta">
+            <span class="module-tag">Desenvolvimento Infantil</span>
+            <span class="module-format">🧠 Neurociência Aplicada</span>
+          </div>
           <h3>Oportunidades Ocultas & Inteligência Emocional</h3>
           <p>Descubra como transformar o momento mais tenso do seu dia na maior oportunidade de aprendizado do seu filho, ensinando autorregulação e maturidade emocional que ele levará para toda a vida.</p>
         </div>
@@ -32,7 +41,10 @@
       <div class="module-card">
         <div class="module-number">03</div>
         <div class="module-info">
-          <span class="module-tag">Blindagem Parental</span>
+          <div class="module-header-meta">
+            <span class="module-tag">Blindagem Parental</span>
+            <span class="module-format">🛡️ Guia Anti-Erros</span>
+          </div>
           <h3>As 8 Armadilhas Fatais a Evitar</h3>
           <p>As 8 reações automáticas que praticamente todos os pais cometem por instinto, mas que apenas pioram o choro. Saiba exatamente o que NÃO fazer e preserve sua autoridade com respeito.</p>
         </div>
@@ -42,10 +54,33 @@
       <div class="module-card">
         <div class="module-number">04</div>
         <div class="module-info">
-          <span class="module-tag">Ação Imediata</span>
+          <div class="module-header-meta">
+            <span class="module-tag">Ação Imediata</span>
+            <span class="module-format">🚨 Scripts Prontos de Diálogo</span>
+          </div>
           <h3>O Protocolo SOS Anti-Birras Passo a Passo</h3>
           <p>O roteiro de primeiros socorros: o que falar, qual tom de voz usar, como se posicionar corporalmente e a sequência exata de ações para cessar a crise e restabelecer a calma em minutos.</p>
         </div>
+      </div>
+    </div>
+
+    <!-- Barra de Entregáveis Extras -->
+    <div class="modules-delivery-bar">
+      <div class="delivery-item">
+        <span class="delivery-icon">📱</span>
+        <span>Acesso no Celular, Tablet ou PC</span>
+      </div>
+      <div class="delivery-item">
+        <span class="delivery-icon">⚡</span>
+        <span>Aulas Diretas de 5 a 12 Minutos</span>
+      </div>
+      <div class="delivery-item">
+        <span class="delivery-icon">💬</span>
+        <span>Suporte Pedagógico para Dúvidas</span>
+      </div>
+      <div class="delivery-item">
+        <span class="delivery-icon">♾️</span>
+        <span>Acesso Imediato e Vitalício</span>
       </div>
     </div>
   </div>
@@ -90,6 +125,15 @@
     line-height: 1;
   }
 
+  .module-header-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.45rem;
+  }
+
   .module-tag {
     display: inline-block;
     font-size: 0.75rem;
@@ -97,7 +141,17 @@
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: var(--color-brand-deep);
-    margin-bottom: 0.45rem;
+  }
+
+  .module-format {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #0369A1;
+    background: #E0F2FE;
+    padding: 0.15rem 0.55rem;
+    border-radius: var(--radius-full);
   }
 
   .module-info h3 {
@@ -112,6 +166,33 @@
     line-height: 1.55;
   }
 
+  /* Barra de Entregáveis Extras */
+  .modules-delivery-bar {
+    margin-top: 2.5rem;
+    background: var(--bg-surface-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 1.25rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .delivery-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+  }
+
+  .delivery-icon {
+    font-size: 1.25rem;
+  }
+
   @media (max-width: 768px) {
     .modules-grid {
       grid-template-columns: 1fr;
@@ -119,6 +200,12 @@
     .module-card {
       padding: 1.75rem;
       gap: 1.25rem;
+    }
+    .modules-delivery-bar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1.5rem;
+      gap: 1rem;
     }
   }
 </style>
