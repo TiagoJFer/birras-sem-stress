@@ -203,8 +203,17 @@ const heroImages = [
       startAutoPlay();
     }, { passive: true });
 
-    // Start playback after initial load is fully settled (4s delay)
-    setTimeout(startAutoPlay, 4000);
+    // Start playback only on first user interaction or scroll (keeps initial LCP < 1s)
+    const startOnInteraction = () => {
+      startAutoPlay();
+      window.removeEventListener('scroll', startOnInteraction);
+      window.removeEventListener('touchstart', startOnInteraction);
+      window.removeEventListener('mousemove', startOnInteraction);
+    };
+
+    window.addEventListener('scroll', startOnInteraction, { once: true, passive: true });
+    window.addEventListener('touchstart', startOnInteraction, { once: true, passive: true });
+    window.addEventListener('mousemove', startOnInteraction, { once: true, passive: true });
   }
 
   function scheduleInit() {
