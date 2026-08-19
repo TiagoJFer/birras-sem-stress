@@ -139,7 +139,7 @@ const heroImages = [
 
     let currentIndex = 0;
     let timer: number | null = null;
-    const intervalTime = 3500; // 3.5 segundos
+    const intervalTime = 5500; // 5.5 segundos
 
     function goToSlide(index: number) {
       slides[currentIndex]?.classList.remove('active');
@@ -203,15 +203,15 @@ const heroImages = [
       startAutoPlay();
     }, { passive: true });
 
-    // Start playback
-    startAutoPlay();
+    // Start playback after initial load is fully settled (4s delay)
+    setTimeout(startAutoPlay, 4000);
   }
 
   function scheduleInit() {
     if ('requestIdleCallback' in window) {
-      window.requestIdleCallback(() => initHeroCarousel(), { timeout: 2000 });
+      window.requestIdleCallback(() => initHeroCarousel(), { timeout: 3000 });
     } else {
-      setTimeout(initHeroCarousel, 250);
+      setTimeout(initHeroCarousel, 500);
     }
   }
 
@@ -359,15 +359,13 @@ const heroImages = [
     height: 100%;
     opacity: 0;
     visibility: hidden;
-    transform: scale(1.03);
-    transition: opacity 0.75s cubic-bezier(0.4, 0, 0.2, 1), transform 0.75s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 0.5s ease;
     z-index: 1;
   }
 
   .carousel-slide.active {
     opacity: 1;
     visibility: visible;
-    transform: scale(1);
     z-index: 2;
   }
 
