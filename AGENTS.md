@@ -33,7 +33,7 @@
 3. **Copywriting Neurocientífico:**
    - Promessa clara: *Eliminar birras em menos de 5 minutos sem gritar, bater ou castigar.*
    - Mecanismo único: *Método do Redirecionamento Cognitivo*.
-   - Oferta: R$ 97,00 à vista ou 12x de R$ 9,74 (Âncora de R$ 555 / Bônus somando R$ 258).
+   - Oferta: R$ 97,00 à vista ou 12x de R$ 10,03 (Âncora de R$ 555 / Bônus somando R$ 258).
    - Garantia: 7 dias incondicional.
 
 ---

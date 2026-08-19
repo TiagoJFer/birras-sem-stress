@@ -1,9 +1,29 @@
 ---
 const heroImages = [
-  { src: '/images/hero-carousel/birra-1.png', alt: 'Criança em momento de birra e acolhimento' },
-  { src: '/images/hero-carousel/birra-2.png', alt: 'Situação de birra resolvida com calma' },
-  { src: '/images/hero-carousel/birra-3.png', alt: 'Método prático para lidar com birras infantis' },
-  { src: '/images/hero-carousel/birra-4.png', alt: 'Família em harmonia e cooperação' },
+  { 
+    avif: '/images/hero-carousel/birra-4.avif', 
+    webp: '/images/hero-carousel/birra-4.webp', 
+    fallback: '/images/hero-carousel/birra-4.png', 
+    alt: 'Família em harmonia e cooperação' 
+  },
+  { 
+    avif: '/images/hero-carousel/birra-3.avif', 
+    webp: '/images/hero-carousel/birra-3.webp', 
+    fallback: '/images/hero-carousel/birra-3.png', 
+    alt: 'Método prático para lidar com birras infantis' 
+  },
+  { 
+    avif: '/images/hero-carousel/birra-1.avif', 
+    webp: '/images/hero-carousel/birra-1.webp', 
+    fallback: '/images/hero-carousel/birra-1.png', 
+    alt: 'Criança em momento de acolhimento e escuta' 
+  },
+  { 
+    avif: '/images/hero-carousel/birra-2.avif', 
+    webp: '/images/hero-carousel/birra-2.webp', 
+    fallback: '/images/hero-carousel/birra-2.png', 
+    alt: 'Situação de birra resolvida com calma e respeito' 
+  },
 ];
 ---
 <section class="hero-section">
@@ -24,16 +44,16 @@ const heroImages = [
       <div class="hero-action-area">
         <a href="#oferta" class="btn-cta">
           <span>QUERO ELIMINAR AS BIRRAS</span>
-          <span class="sub-text">⚡ Acesso Imediato • 100% Seguro • Por apenas 12x de R$ 9,74 ou R$ 97 à vista</span>
+          <span class="sub-text">⚡ Acesso Imediato • 100% Seguro • Por apenas 12x de R$ 10,03 ou R$ 97 à vista</span>
         </a>
 
         <!-- Social Proof Chips -->
         <div class="hero-social-proof">
           <div class="avatar-stack">
-            <img src="/images/claudia.jpeg" alt="Aluna" class="stack-avatar" />
-            <img src="/images/kele.jpg" alt="Aluna" class="stack-avatar" />
-            <img src="/images/gleisy.png" alt="Aluna" class="stack-avatar" />
-            <img src="/images/print-tatiana.jpeg" alt="Aluna" class="stack-avatar" />
+            <img src="/images/claudia.webp" alt="Aluna" class="stack-avatar" width="42" height="42" loading="eager" decoding="async" />
+            <img src="/images/kele.webp" alt="Aluna" class="stack-avatar" width="42" height="42" loading="eager" decoding="async" />
+            <img src="/images/gleisy.webp" alt="Aluna" class="stack-avatar" width="42" height="42" loading="eager" decoding="async" />
+            <img src="/images/print-tatiana.webp" alt="Aluna" class="stack-avatar" width="42" height="42" loading="eager" decoding="async" />
           </div>
           <div class="social-proof-text">
             <div class="stars-row">
@@ -53,13 +73,20 @@ const heroImages = [
           <div class="carousel-track">
             {heroImages.map((img, index) => (
               <div class={`carousel-slide ${index === 0 ? 'active' : ''}`} data-slide-index={index}>
-                <img 
-                  src={img.src} 
-                  alt={img.alt} 
-                  class="hero-main-img"
-                  loading={index === 0 ? 'eager' : 'lazy'}
-                  fetchpriority={index === 0 ? 'high' : 'auto'}
-                />
+                <picture>
+                  <source srcset={img.avif} type="image/avif" />
+                  <source srcset={img.webp} type="image/webp" />
+                  <img 
+                    src={img.webp} 
+                    alt={img.alt} 
+                    class="hero-main-img"
+                    width="440"
+                    height="460"
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    fetchpriority={index === 0 ? 'high' : 'low'}
+                    decoding="async"
+                  />
+                </picture>
               </div>
             ))}
           </div>
