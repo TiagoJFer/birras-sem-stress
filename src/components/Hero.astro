@@ -207,13 +207,21 @@ const heroImages = [
     startAutoPlay();
   }
 
-  // Run on initial load and Astro page transitions
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initHeroCarousel);
-  } else {
-    initHeroCarousel();
+  function scheduleInit() {
+    if ('requestIdleCallback' in window) {
+      window.requestIdleCallback(() => initHeroCarousel(), { timeout: 2000 });
+    } else {
+      setTimeout(initHeroCarousel, 250);
+    }
   }
-  document.addEventListener('astro:page-load', initHeroCarousel);
+
+  // Run on idle after initial paint to prevent layout thrashing / forced reflow
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', scheduleInit);
+  } else {
+    scheduleInit();
+  }
+  document.addEventListener('astro:page-load', scheduleInit);
 </script>
 
 <style>
